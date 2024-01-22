@@ -30,7 +30,7 @@ function Navbar({ toggleDrawer,setEditCreateChanelBtn }) {
     function start() {
       gapi.client.init({
         clientId:
-          "3637153906-9n5sjbldq7o8cm4u6nipdgu3jgorolts.apps.googleusercontent.com",
+          "876890988338-vapejkeprdcdbck0832mp304ihi002d0.apps.googleusercontent.com",
         scope: "email",
       });
     }
@@ -96,7 +96,7 @@ function Navbar({ toggleDrawer,setEditCreateChanelBtn }) {
           <>
             <GoogleLogin
               clientId={
-                "3637153906-9n5sjbldq7o8cm4u6nipdgu3jgorolts.apps.googleusercontent.com"
+                "876890988338-vapejkeprdcdbck0832mp304ihi002d0.apps.googleusercontent.com"
               }
               onSuccess={onSuccess}
               onFailure={onFailure}
