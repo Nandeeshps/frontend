@@ -1,0 +1,219 @@
+.group-chat-container {
+    display: flex;
+    height: 92.5vh;
+  }
+  @media (max-width: 350px) {
+    .group-chat-container {
+      height: auto;
+    }
+  }
+  
+  .chat-sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(18, 18, 18); 
+  }
+
+  .chat-sidebar .search-container {
+    color: white;
+  }
+
+  .chat-sidebar .search-container input{
+    border: none;
+    background-color: transparent;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .chat-list {
+    margin-top: 10px;
+  }
+  
+  .chat-item {
+    cursor: pointer;
+    padding: 8px;
+    margin-bottom: 5px;
+    background-color: rgb(165, 167, 173);
+    border-radius: 5px;
+    width: 20vw;
+  }
+  .chat-item:hover {
+    background: whitesmoke;
+  }
+  
+  .chat-main {
+    flex: 3;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(18, 18, 18);
+    border: 1px solid #ccc;
+    color: grey;
+    border: 2.5px solid grey;
+    
+  }
+  .chat-sidebar .create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chat-sidebar .create label{
+    color: rgb(165, 167, 173);
+  }
+  .chat-sidebar .create label input{
+    border-color: black;
+  width: 10vw;
+    color: black;
+  }
+  
+  .chat-sidebar .create button{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .chat-sidebar .create button:hover{
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+  }
+
+  .chat-main .display{
+    background-color: rgb(165, 167, 173);
+    color: black;
+    border: 5px;
+  }
+  .chat-main .display h2{
+    text-align: center;
+  }
+  .chat-main .display p{
+    text-align: center;
+  }
+
+   .sending{
+   position: absolute;
+  bottom: 0;
+  left: 250px;
+   }
+   .sending input{
+    width: 29.5vw;
+    border-radius: 10px;
+    height: 6.5vh;
+    background: #F5F5F1;
+    }
+    .sending button{
+      border-radius: 50%;
+      color: white;
+      background-color: transparent;
+      border: none;
+      padding: 10px;
+    }
+    .sending button:hover{
+      background-color: #3498db;
+    }
+
+
+  .toggle-create-chat-button {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+
+
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .modal__dialog {
+    width: 870px;
+    position: relative;
+  }
+  
+  .modal__close {
+    font-size: 0;
+    position: absolute;
+    right: 25px;
+    top: -30px;
+    cursor: pointer;
+  }
+  
+  .modal__icon {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .modal__icon .fa-times {
+    font-size: 18px;
+    line-height: 16px;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /* messasge */
+  .chat-main .message{
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 50vh;
+  position: absolute;
+  overflow-y:scroll;
+  scroll-behavior: smooth;
+  right: 0;
+  width: -webkit-fill-available;
+  OVERFLOW-X: auto;
+  }
+  .chat-main .message .block{
+    display: flex;
+    /* width: 65vw; */
+    justify-content: end;
+  }
+  .chat-main .message .otherblock{
+    display: flex;
+    justify-content: start;
+    /* width: 50vw; */
+  }
+  .chat-main .message .my-message{
+    background-color: white; 
+  color: black; 
+  padding: 8px;
+  max-width: 10vw;
+  height: auto;
+  border-radius: 8px;
+  text-align: right;
+   overflow-wrap: break-word;
+   margin-bottom: 8px;
+  }
+  .message .my-message {
+    margin-left: auto;
+  }
+
+  .chat-main .message .other-message{
+    background-color: rgb(165, 167, 173); 
+    color: black; 
+    text-align: left;
+    padding: 8px;
+    max-width: 10vw;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  overflow-wrap: break-word;
+  }
+  .chat-main .message .block .front{
+    display: flex;
+    gap: 5px;
+  }
+  .chat-main .message .otherblock .reverse{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .message .my-message {
+    margin-right: auto;
+  }
