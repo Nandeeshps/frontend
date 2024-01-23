@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteComment, editComment } from "../../actions/comments";
 import { hatefulWords, harmfulWords, spamWords } from './autoDeleteWords';
-import  Papa  from "papaparse";
+
 
 import "./comments.css";
 function DisplayComments({
@@ -20,17 +20,6 @@ function DisplayComments({
 
   const CurrentUser = useSelector((state) => state?.currentUserReducer);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch('./badWords.csv'); 
-      const csvData = await response.text();
-      const parsedData = Papa.parse(csvData, { header: false });
-      const words = parsedData.data.map((row) => row[0].toLowerCase());
-      setBadWords(words);
-    };
-
-    fetchData();
-  }, []);
 
 
   const handleEdit = (ctId, ctBdy) => {
@@ -59,9 +48,7 @@ function DisplayComments({
     dispatch(deleteComment(id))
   }
 
-  const containsBadWord = badWords.some((word) =>
-  commentBody.toLowerCase().includes(word)
-);
+
 
   return (
     <>
@@ -92,8 +79,7 @@ function DisplayComments({
         <>
         {hatefulWords.some(word => commentBody.toLowerCase().includes(word)) ||
          harmfulWords.some(word => commentBody.toLowerCase().includes(word)) ||
-         spamWords.some(word => commentBody.toLowerCase().includes(word)) ||
-         containsBadWord ? (
+         spamWords.some(word => commentBody.toLowerCase().includes(word)) ? (
           <p className="comment_body">
             Comment contains inappropriate content and is deleted.
           </p>
