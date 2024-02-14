@@ -17,7 +17,7 @@ const Chat = ({ chatDetails }) => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch(`https://youtubeclone1-yur4.onrender.com/getMessage?groupName=${chatDetails.groupName}`);
+        const response = await fetch(`https://youtubeclone1-yur4.onrender.com/api/getMessage?groupName=${chatDetails.groupName}`);
         const data = await response.json();
 
         if (response.ok) {

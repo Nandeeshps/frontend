@@ -68,7 +68,7 @@ const CreateChat = ({ onCreateChat }) => {
         <input type="email" value={groupMembers} onChange={(e) => setGroupMembers(e.target.value)} />
       </label>
       <br />
-      <button onClick={createChat}>Create Group</button>
+      <button onClick={createChat}>Create Chat</button>
 
       {/* Display created group details after creating the group */}
       {createdGroup && (

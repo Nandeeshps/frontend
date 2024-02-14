@@ -125,7 +125,7 @@ const PrivateChat = () => {
         <>
           <div className="chat-sidebar">
             <button onClick={toggleCreateChat} className="toggle-create-chat-button">
-              {isCreateChatVisible ? 'Create Group Chat' : 'Create Group Chat'}
+              {isCreateChatVisible ? 'Create private Chat' : 'Create private Chat'}
             </button>
             {isCreateChatVisible && <CreateChat onCreateChat={createChat} />}
             <div className="search-container">
